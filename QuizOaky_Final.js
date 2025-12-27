@@ -96,7 +96,7 @@
             `<div class="option-display ${optIndex === q.correctAnswer ? 'correct-option' : ''}">${String.fromCharCode(65 + optIndex)}. ${escapeHtml(option)}</div>`
           ).join('')}
         </div>
-        <button class="btn btn-danger" data-id="${q.id}">🗑️ Delete</button>
+        <button class="btn btn-danger" data-id="${q.id}"> Delete</button>
       `;
       questionsList.appendChild(questionDiv);
       const delBtn = questionDiv.querySelector('button[data-id]');
@@ -303,10 +303,10 @@
     displayCollectedResults();
 
     if (successCount > 0) {
-      showAlert(`✅ Successfully collected ${successCount} student results!`, 'success');
+      showAlert(` Successfully collected ${successCount} student results!`, 'success');
     }
     if (errorCount > 0) {
-      showAlert(`⚠️ ${errorCount} links were invalid or couldn't be processed.`, 'warning');
+      showAlert(` ${errorCount} links were invalid or couldn't be processed.`, 'warning');
     }
 
     if (ta) ta.value = '';
@@ -421,16 +421,16 @@
           if ($('currentStudentName')) $('currentStudentName').textContent = studentName;
           if ($('studentQuizId')) $('studentQuizId').textContent = quizId;
           initializeStudentPanel();
-          showAlert(`✅ Welcome ${studentName}! Quiz loaded successfully!`, 'success');
+          showAlert(` Welcome ${studentName}! Quiz loaded successfully!`, 'success');
           return;
         }
       } catch (error) {
-        showAlert('❌ Invalid quiz link. Please check with your teacher.', 'danger');
+        showAlert(' Invalid quiz link. Please check with your teacher.', 'danger');
         return;
       }
     }
 
-    showAlert('❌ Invalid quiz link format. Please paste the complete link from your teacher.', 'danger');
+    showAlert(' Invalid quiz link format. Please paste the complete link from your teacher.', 'danger');
   }
 
   function initializeStudentPanel() {
@@ -442,7 +442,7 @@
       if (startQuizBtn) startQuizBtn.disabled = true;
     } else {
       if (quizInfo) quizInfo.innerHTML = `
-          <div class="alert alert-success">✅ Quiz loaded! There are <strong>${questions.length}</strong> questions waiting for you.</div>
+          <div class="alert alert-success"> Quiz loaded! There are <strong>${questions.length}</strong> questions waiting for you.</div>
           <p><strong>Instructions:</strong></p>
           <ul style="text-align: left; margin: 15px 0; padding-left: 20px;">
               <li>Each question has a <strong>1 minute timer</strong>.</li>
@@ -675,16 +675,16 @@
     let title, message;
 
     if (percentage === 100) {
-      title = "Perfect Score! 🎉";
+      title = "Perfect Score! ";
       message = "Excellent! You got all questions right!";
     } else if (percentage >= 80) {
-      title = "Great Job! 👏";
+      title = "Great Job! ";
       message = `Very good! You scored ${percentage}%!`;
     } else if (percentage >= 60) {
-      title = "Good Work! 👍";
+      title = "Good Work! ";
       message = `Not bad! You scored ${percentage}%. Keep learning!`;
     } else {
-      title = "Keep Learning! 📚";
+      title = "Keep Learning! ";
       message = `You scored ${percentage}%. Don't worry, practice makes perfect!`;
     }
 
@@ -731,7 +731,7 @@
     }
 
     // original message exactly as you had
-    const teacherMessage = '📋 Quiz link copied! Share this with your students. They will send you result links after completing the quiz.';
+    const teacherMessage = ' Quiz link copied! Share this with your students. They will send you result links after completing the quiz.';
 
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(quizLink).then(() => {
@@ -757,7 +757,7 @@
     link = link.trim();
     if (!link) { showAlert('No result link found to copy', 'warning'); return; }
 
-    const studentMessage = '📋 Result link copied! Share this with your teacher so they can include your score in the Excel file.';
+    const studentMessage = ' Result link copied! Share this with your teacher so they can include your score in the Excel file.';
 
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(link).then(() => {
