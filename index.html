@@ -17,22 +17,22 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>🎓 Quizoaky</h1>
-            <p>✅ Universal Compatibility: Works on Any Phone, Tablet, or PC.</p>
+            <h1> Quizoaky</h1>
+            <p> Universal Compatibility: Works on Any Phone, Tablet, or PC.</p>
         </div>
 
         <div class="content">
             <div id="roleSelection" class="role-selection">
                 <h2>Choose Your Role</h2>
-                <p>✅ Students can use any device<br>✅ Results are automatically collected in the teacher's Excel!</p>
+                <p> Students can use any device<br> Results are automatically collected in the teacher's Excel!</p>
                 
                 <div class="role-buttons">
                     <button class="role-btn" onclick="selectRole('teacher')">
-                        👨‍🏫 Teacher<br>
+                         Teacher<br>
                         <small>Create quiz & collect results</small>
                     </button>
                     <button class="role-btn" onclick="selectRole('student')">
-                        👨‍🎓 Student<br>
+                         Student<br>
                         <small>Take quiz on any device</small>
                     </button>
                 </div>
@@ -42,19 +42,19 @@
                 <button class="back-btn" onclick="goHome()">← Back to Home</button>
                 
                 <div id="shareSection" class="share-section" style="display: none;">
-                    <h3>📤 Share Quiz Link with Students</h3>
+                    <h3> Share Quiz Link with Students</h3>
                     <p><strong>Quiz ID:</strong> <span id="displayQuizId">Generating...</span></p>
                     
                     <div class="quiz-link" id="quizLink">Generating quiz link...</div>
-                    <button id="copyQuizBtn" class="copy-btn" onclick="copyQuizLink()">📋 Copy Quiz Link</button>
+                    <button id="copyQuizBtn" class="copy-btn" onclick="copyQuizLink()"> Copy Quiz Link</button>
                     
                     <p style="margin-top: 15px; color: #2e7d32; font-weight: bold;">
-                        ✅ Students will send you their result links automatically after completing the quiz!
+                         Students will send you their result links automatically after completing the quiz!
                     </p>
                 </div>
 
                 <div class="section">
-                    <h3>📝 Create New Question</h3>
+                    <h3> Create New Question</h3>
                     <form id="questionForm">
                         <div class="form-group">
                             <label>Question:</label>
@@ -87,27 +87,27 @@
                             </div>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary">✅ Add Question</button>
-                        <button type="button" class="btn btn-info" onclick="exportQuestions()">📥 Export Questions</button>
-                        <button type="button" class="btn btn-success" onclick="generateNewQuiz()">🔄 New Quiz</button>
+                        <button type="submit" class="btn btn-primary"> Add Question</button>
+                        <button type="button" class="btn btn-info" onclick="exportQuestions()"> Export Questions</button>
+                        <button type="button" class="btn btn-success" onclick="generateNewQuiz()"> New Quiz</button>
                     </form>
                 </div>
 
                 <div class="section">
-                    <h3>📋 Questions (<span id="questionCount">0</span>)</h3>
+                    <h3> Questions (<span id="questionCount">0</span>)</h3>
                     <div id="questionsList" class="questions-list"></div>
                     <button id="clearQsBtn" class="btn btn-danger" onclick="clearAllQuestions()" style="margin-top: 10px;">
-                        🗑️ Clear Questions
+                         Clear Questions
                     </button>
                 </div>
 
                 <div class="section">
-                    <h3>📊 Collect Student Results</h3>
+                    <h3> Collect Student Results</h3>
                     <div class="collect-section">
-                        <h4>🔗 Paste Student Result Links Here:</h4>
+                        <h4> Paste Student Result Links Here:</h4>
                         <p style="margin-bottom: 10px; color: #666;">Students will share result links with you after completing the quiz. Paste all links below (one per line):</p>
                         <textarea id="resultUrls" class="url-input" placeholder="Paste student result links here, one per line..."></textarea>
-                        <button id="collectBtn" class="btn btn-primary" onclick="collectResults()">🔄 Collect All Results</button>
+                        <button id="collectBtn" class="btn btn-primary" onclick="collectResults()"> Collect All Results</button>
                     </div>
                     
                     <div id="collectedResultsList" class="results-list">
@@ -115,8 +115,8 @@
                     </div>
                     
                     <div style="margin-top: 15px;">
-                        <button id="downloadAllBtn" class="btn btn-success" onclick="downloadAllResults()">📥 Download All Results (Excel)</button>
-                        <button id="clearResultsBtn" class="btn btn-danger" onclick="clearCollectedResults()">🗑️ Clear Results</button>
+                        <button id="downloadAllBtn" class="btn btn-success" onclick="downloadAllResults()"> Download All Results (Excel)</button>
+                        <button id="clearResultsBtn" class="btn btn-danger" onclick="clearCollectedResults()"> Clear Results</button>
                     </div>
                 </div>
             </div>
@@ -125,7 +125,7 @@
                 <button class="back-btn" onclick="goHome()">← Back to Home</button>
                 
                 <div class="section">
-                    <h3>👤 Enter Your Information</h3>
+                    <h3> Enter Your Information</h3>
                     <div class="form-group">
                         <label>Your Name:</label>
                         <input type="text" id="studentName" placeholder="Enter your full name" required>
@@ -134,10 +134,10 @@
                         <label>Paste Quiz Link from Teacher:</label>
                         <textarea id="joinCode" class="code-input" placeholder="Paste the complete quiz link your teacher shared with you here..."></textarea>
                     </div>
-                    <button class="btn btn-primary" onclick="joinQuiz()">🚀 Join Quiz</button>
+                    <button class="btn btn-primary" onclick="joinQuiz()"> Join Quiz</button>
                     
                     <p style="margin-top: 20px; color: #666; text-align: center;">
-                        <small>💡 Paste the complete link from your teacher. After completing the quiz, you'll get a result link to share back with them!</small>
+                        <small> Paste the complete link from your teacher. After completing the quiz, you'll get a result link to share back with them!</small>
                     </p>
                 </div>
             </div>
@@ -146,12 +146,12 @@
                 <button class="back-btn" onclick="goBackToJoin()">← Enter Different Link</button>
                 
                 <div class="student-info">
-                    <div class="student-name">👤 Student: <span id="currentStudentName">Unknown</span></div>
+                    <div class="student-name"> Student: <span id="currentStudentName">Unknown</span></div>
                     <div style="font-size: 0.8rem; color: #666; margin-top: 5px;">Quiz ID: <span id="studentQuizId">Unknown</span></div>
                 </div>
                 
                 <div id="quizStart" class="section">
-                    <h3>🚀 Ready to Take the Quiz?</h3>
+                    <h3> Ready to Take the Quiz?</h3>
                     <p id="quizInfo">Loading quiz information...</p>
                     <button id="startQuizBtn" class="btn btn-primary" onclick="startQuiz()" disabled>
                         Start Quiz
@@ -178,19 +178,19 @@
                     <p id="resultMessage">Great job on completing the quiz!</p>
                     
                     <div id="resultUrlSection" class="result-url-section">
-                        <h4>📤 IMPORTANT: Share This Link with Your Teacher</h4>
+                        <h4> IMPORTANT: Share This Link with Your Teacher</h4>
                         <p><strong>Copy and send this link to your teacher:</strong></p>
                         <div class="result-url" id="resultUrl">Generating...</div>
-                        <button id="copyResultBtn" class="copy-btn" onclick="copyResultUrl()">📋 Copy Result Link</button>
-                        <p style="margin-top: 10px;"><small>💡 Your teacher needs this link to include your score in the class results Excel file!</small></p>
+                        <button id="copyResultBtn" class="copy-btn" onclick="copyResultUrl()"> Copy Result Link</button>
+                        <p style="margin-top: 10px;"><small> Your teacher needs this link to include your score in the class results Excel file!</small></p>
                     </div>
                     
                     <div style="margin-top: 30px;">
                         <button class="btn btn-primary" onclick="downloadResults()">
-                            📥 Download My Results
+                             Download My Results
                         </button>
                         <button id="retakeBtn" class="btn btn-secondary" onclick="retakeQuiz()">
-                            🔄 Retake Quiz
+                             Retake Quiz
                         </button>
                     </div>
                 </div>
